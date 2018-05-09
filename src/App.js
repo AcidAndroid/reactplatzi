@@ -15,7 +15,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
-        <Media title="¿que es rd?" autor="By Pollo" image="../images/bitcoin.jpg" />
+        <Media tipo={'video'} title="¿que es rd?" autor="By Pollo" image="../images/bitcoin.jpg" />
       </div>
     );
   }
