@@ -37,32 +37,32 @@ handleClick =(event)=>{
 
     render() {
         return (
-            <div className="row media" onClick={this.handleClick}>
-            <div className="col s12 m7">
+           
+            <div className="col s2 media" onClick={this.handleClick}>
               <div className="card">
                 <div className="card-image">
-                  <img src={this.props.image} alt="Bitcoin" />
+                  <img src={this.props.cover} alt="Bitcoin" />
                   {/* Asi se manejan la asignacion de atributos pero SIN considerar es estado inicial */}
                   <span className="card-title">{this.props.autor}</span>                  
                 </div>
                 <div className="card-content">
                   <p>{this.props.title}</p>
                 </div>
-                {/* Asi se manejan la asignacion de atributos pero SI considerarando es estado inicial */}
+                {/* Asi se manejan la asignacion de atributos pero SI considerarando es estado inicial paero tambien las variables*/}
                 <div className="card-action">
-                  <a href="#">{this.state.autor}</a>
+                  <a href="#">{this.props.autor||this.state.autor}</a>
                 </div>
               </div>
             </div>
-          </div>
+          
             
         );
     }
 }
 Media.propTypes ={
-    image:PropTypes.string,
-    title:PropTypes.string,
+    cover:PropTypes.string,
+    title:PropTypes.string.isRequired,
     autor:PropTypes.string,
-    tipo:PropTypes.oneOf(['video','audio']).isRequired,
+    tipo:PropTypes.oneOf(['video','audio']),
 }
 export default Media;
