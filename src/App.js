@@ -10,9 +10,8 @@ import datos from './api.json'
 class App extends Component {
   render() {
     return (
-      <div className="container">       
-        {/* <Playlist data={datos}/> */}
-        <Home/>
+      <div className="container">               
+        <Home {...datos}/>
       </div>
     );
   }
